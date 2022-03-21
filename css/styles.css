@@ -1,0 +1,51 @@
+
+/* custom properties */
+:root {
+    --color-bgr-lightblue: #E6EFFF; 
+    --color-bgr-white: #FFFFFF; 
+
+}
+
+
+/* common */ 
+
+@font-face {
+    font-family: Cerebri Sans Bold;
+    font-weight: bold;
+    src: url("./cerebri.sans.bold.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: Cerebri Sans Book;
+    font-weight: normal;
+    src: url("./metropolis.book.ttf") format("opentype");
+}
+
+body {
+    font-family: 'Cerebri Sans Book', sans-serif;
+    font-size: 15px;
+
+}
+
+
+
+
+/* sidebar */
+
+.sidebar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 268px;
+    height: 100%;
+    background-color: var(--color-bgr-lightblue);
+}
+
+
+/* main */
+.main {
+    margin-left: 268px;
+    max-width: calc(1440px - 268px);
+    
+}
+
