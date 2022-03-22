@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 
 /* custom properties */
 :root {
@@ -36,16 +39,36 @@ body {
     position: fixed; 
     top: 0;
     left: 0;
-    width: 268px;
+    width: 267px;
     height: 100%;
+    padding: 40px 0 0 60px;
     background-color: var(--color-bgr-lightblue);
+}
+
+.nav__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+}
+
+.nav__link {
+    text-decoration: none;
+}
+.nav__icon {
+    width: 24px;
+    height: 24px;
 }
 
 
 /* main */
 .main {
-    margin-left: 268px;
-    max-width: calc(1440px - 268px);
+    margin-left: 267px;
+    max-width: calc(1440px - 267px);
+    padding: 45px 61px 0 15px;
     
 }
 
