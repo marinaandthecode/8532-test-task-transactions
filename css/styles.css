@@ -52,6 +52,7 @@ body {
     position: fixed; 
     top: 0;
     left: 0;
+    z-index: 2;
     width: 267px;
     height: 100%;
     padding: 40px 0 0 60px;
@@ -87,7 +88,7 @@ body {
 
 
 
-/* main nav */
+/* nav */
 
 .nav__list {
     list-style: none;
@@ -121,8 +122,8 @@ body {
 
 
 
-
 /* main */
+
 .main {
     margin-left: 267px;
     max-width: calc(1440px - 267px);
@@ -130,11 +131,34 @@ body {
     
 }
 
+
+/* search top */
+
 .search__top {
     display: flex; 
     justify-content: space-between;
     align-items: center;
+    margin-top: 35px;
+    margin-bottom: 25px;
 
+}
+
+.search__title {
+    margin-top: 14px;
+    font-size: 30px;
+    font-family: Cerebri Sans Bold;
+    line-height: 38.1px;
+    
+}
+
+.search__title-number {
+    font-size: 20px;
+    line-height: 25.4px;
+    color: var(--color-accent-blue);
+}
+
+.search__item_period {
+    width: 319px;
 }
 
 .search__grid {
@@ -147,16 +171,83 @@ body {
 .search__item {
     width: 355px;
     height: 52px;
+    border-radius: 4px;
+}
+
+.search__input {
+    color: var(--color-text-dark-blue);
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.search__item:focus {
+    border-color: var(--color-accent-blue);
+}
+
+.search__input:focus + .search__label {
+    color: var(--color-accent-blue);
+    size: 13px;
+    line-height: 18px;
 }
 
 .search__bottom {
     display: flex; 
+    width: 100%;
     justify-content: flex-end;
     align-items: center;
     gap: 8px;
     margin-top: 16px;
     margin-bottom: 25px;
 }
+
+.search__export-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-accent-blue);
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.icon-export {
+    width: 24px;
+    height: 24px;
+}
+
+.search__remove-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 147px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #9AA3BC;
+}
+
+.search__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 157px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 10px;
+    background-color: var(--color-accent-blue);
+    color: var(--color-bgr-white);
+    text-transform: uppercase;
+    
+
+}
+
+
+/* filter */
 
 .filter {
     display: flex; 
@@ -172,6 +263,7 @@ body {
     color: var(--color-accent-blue);
     text-transform: uppercase;
     text-align: center;
+    white-space: nowrap;
 }
 
 
