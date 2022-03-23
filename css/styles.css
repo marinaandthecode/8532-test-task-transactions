@@ -6,6 +6,16 @@
 :root {
     --color-bgr-lightblue: #E6EFFF; 
     --color-bgr-white: #FFFFFF; 
+    --color-accent-blue: #2450EF;
+    
+
+    --color-status-finaliser: rgba(69, 108, 248, 0.3); 
+    --color-status-verifier: rgba(227, 230, 237, 1);
+    --color-status-refuse: rgba(253, 202, 196, 1);
+    --color-status-conteste: rgba(255, 235, 179, 1);
+    --color-status-valide: rgba(177, 241, 226, 1);
+    --color-status-annule: rgba(5, 25, 81, 0.3);
+    --color-status-bloque: rgba(230, 239, 255, 1);
 
 }
 
@@ -95,6 +105,7 @@ body {
     display: flex; 
     justify-content: flex-end;
     align-items: center;
+    gap: 8px;
     margin-top: 16px;
     margin-bottom: 25px;
 }
@@ -107,16 +118,59 @@ body {
 
 .filter__item {
     height: 36px;
+    padding: 7px 16px 7px 16px;
+    border-radius: 10px;
+    line-height: 22px; 
+    color: var(--color-accent-blue);
+    text-transform: uppercase;
+    text-align: center;
 }
+
+
+/* status classes */
+.finaliser {
+    background-color: var(--color-status-finaliser);
+}
+
+.verifier {
+    background-color: var(--color-status-verifier);
+}
+
+.refuse {
+    background-color: var(--color-status-refuse)
+}
+
+.conteste {
+    background-color: var(--color-status-conteste);
+}
+
+.valide {
+    background-color: var(--color-status-valide);
+}
+
+.annule {
+    background-color: var(--color-status-annule);
+}
+
+.bloque {
+    background-color: var(--color-status-bloque);
+}
+
+
+/* transactions table */
 
 .transactions__table {
     width: 100%; 
-    text-align: left;
+    margin-top: 24px;
+    text-align: left; 
+    border-color: var(--color-bgr-lightblue);
 }
 
-.transaction__action {
-    text-align: right;
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: var(--color-bgr-lightblue);
 }
+
+
 
 .transaction__country_from, 
 .transaction__country_to {
@@ -126,5 +180,23 @@ body {
     gap: 8px;
 }
 
+.transaction__status {
+    height: 25px;
+    padding: 7px 8px 7px 8px;
+    border-radius: 60px;
+    gap: 8px;
+    
+}
+
+.transaction__action {
+    text-align: right;
+}
+
+
+.main__pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 22px;
+}
 
 

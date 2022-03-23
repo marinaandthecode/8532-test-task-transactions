@@ -21,7 +21,7 @@
                 <option value="eur-ng">EUR > NG</option>
                 <option value="eur-za">EUR > ZA</option>
             </select>
-            <img class="select__arrow" src="images/arrow1.svg">
+            <!-- <img class="select__arrow" src="images/arrow1.svg"> -->
         </div>
         <hr class="sidebar__hr">
         <nav class="nav sidebar__nav">
@@ -66,31 +66,31 @@
             <form class="search__form">
                 <div class="search__top">
                     <h1 class="search__title">Transactions <span class="search__title-number">(567 890)</span></h1>
-                    <div class="search__item">
-                        <input class="search__input search__input_period" type="date" id="period" name="period">
-                        <label class="search__label search__label_period" for="period">Période</label>
+                    <div class="search__item form-floating">
+                        <input class="search__input search__input_period form-control" type="date" id="period floatingInput" name="period">
+                        <label class="search__label search__label_period" for="period floatingInput">Période</label>
                     </div>
                 </div>
                 <div class="search__grid">
-                    <div class="search__item">
-                        <input class="search__input search__input_transaction" type="text" id="transaction" name="transaction" placeholder="ID transactions">
-                        <label class="search__label search__label_transaction" for="transaction">ID transactions</label>
+                    <div class="search__item form-floating">
+                        <input class="search__input search__input_transaction form-control type="text" id="transaction floatingInput name="transaction" value="#1234567890" placeholder="ID transactions">
+                        <label class="search__label search__label_transaction" for="transaction floatingInput">ID transactions</label>
                     </div>
-                    <div class="search__item">
-                        <input class="search__input search__input_amount" type="number" id="amount" name="amount" placeholder="Montant">
-                        <label class="search__label search__label_amount" for="amount">Montant</label>
+                    <div class="search__item form-floating">
+                        <input class="search__input search__input_amount form-control" type="number" id="amount floatingInput" name="amount" placeholder="Montant">
+                        <label class="search__label search__label_amount" for="amount floatingInput">Montant</label>
                     </div>
-                    <div class="search__item">
-                        <select class="search__input search__input_currency" id="currency" name="currency" placeholder="Currency">
+                    <div class="search__item form-floating">
+                        <select class="search__input search__input_currency form-select" id="currency floatingSelect" name="currency" placeholder="Currency">
                             <option value="eur">EUR</option>
                             <option value="zw">ZW</option>
                             <option value="ng">NG</option>
                             <option value="za">ZA</option>
                         </select>
-                        <label class="search__label search__label_currency" for="currency">Currency</label>
+                        <label class="search__label search__label_currency" for="currency floatingSelect">Currency</label>
                     </div>
-                    <div class="search__item">
-                        <select class="search__input search__input_type" id="type" name="type" placeholder="Type" multiple>
+                    <div class="search__item form-floating">
+                        <select class="search__input search__input_type form-select" id="type floatingSelect" name="type" placeholder="Type">
                             <option value="transfer">Transfer</option>
                             <option value="withdraw">Withdraw</option>
                             <option value="deposit">Deposit</option>
@@ -98,10 +98,10 @@
                             <option value="reward">Reward</option>
                             <option value="refund">Refund</option>
                         </select>
-                        <label class="search__label search__label_type" for="type">Type</label>
+                        <label class="search__label search__label_type" for="type floatingSelect">Type</label>
                     </div>
-                    <div class="search__item">
-                        <select class="search__input search__input_status" id="status" name="status" placeholder="Statut" multiple>
+                    <div class="search__item form-floating">
+                        <select class="search__input search__input_status form-select" id="status floatingSelect name="status" placeholder="Statut">
                             <option value="finaliser">A finaliser</option>
                             <option value="verifier">A vérifier</option>
                             <option value="refuse">Refusé</option>
@@ -109,17 +109,18 @@
                             <option value="valide">Validé</option>
                             <option value="annule">Annulé</option>
                         </select>
-                        <label class="search__label search__label_status" for="status">Statut</label>
+                        <label class="search__label search__label_status" for="status floatingSelect">Statut</label>
                     </div>
-                    <div class="search__item">
-                        <select class="search__input search__input_country" id="country" name="country" placeholder="Pays" multiple>
+                    <div class="search__item form-floating">
+                        <select class="search__input search__input_country form-select" id="country floatingSelect" name="country" placeholder="Pays">
                             <option value="Allemagne">Allemagne</option>
                             <option value="Autriche">Autriche</option>
                             <option value="Belgique">Belgique</option>
                             <option value="Bulgarie">Bulgarie</option>
                         </select>
-                        <label class="search__label search__label_country" for="country">Pays</label>
+                        <label class="search__label search__label_country" for="country floatingSelect">Pays</label>
                     </div>
+                    <!-- Floating labels: Selects with size and multiple are not supported -->
                 </div>
                 <div class="search__bottom">
                     <a href="#" class="search__export">Exporter
@@ -131,13 +132,13 @@
             </form>
         </div>
         <div class="main__filter filter">
-            <div class="filter__item">A finaliser (90)</div>
-            <div class="filter__item">A vérifier (70)</div>
-            <div class="filter__item">Paiement refusé (90)</div>
-            <div class="filter__item">Contesté (90)</div>
-            <div class="filter__item">Validé (150)</div>
-            <div class="filter__item">Annulé (150)</div>
-            <div class="filter__item">Bloqué (150)</div>
+            <div class="filter__item filter__item_finaliser finaliser">A finaliser (90)</div>
+            <div class="filter__item filter__item_verifier verifier">A vérifier (70)</div>
+            <div class="filter__item filter__item_refuse refuse">Paiement refusé (90)</div>
+            <div class="filter__item filter__item_conteste conteste">Contesté (90)</div>
+            <div class="filter__item filter__item_valide valide">Validé (150)</div>
+            <div class="filter__item filter__item_annule annule">Annulé (150)</div>
+            <div class="filter__item filter__item_bloque bloque">Bloqué (150)</div>
         </div>
         <div class="main__transactions transactions">
             <table class="transactions__table table">
@@ -153,7 +154,7 @@
                     <th scope="col" class="transaction__action">Actions</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="transactions__body">
                   <tr class="transactions__row">
                     <th scope="row">#6798430</th>
                     <td>Transfer</td>
@@ -161,7 +162,7 @@
                     <td>Abdoulaye Camara <br><span class="transaction__country_from"><img src="images/icon-flag-france.svg"> France</span></td>
                     <td>31 janv. 2022 <br> 14:17:07</td>
                     <td>Mariama Mara <br><span class="transaction__country_to"><img src="images/icon-flag-guinee.svg"> Guinée</span></td>
-                    <td>Validé</td>
+                    <td><span class="transaction__status valide">Validé</span></td>
                     <td class="transaction__action"><img src="images/icon-actions.svg"></td>
                   </tr>
                   <tr class="transactions__row">
@@ -171,7 +172,7 @@
                     <td>Fatoumata Diallo <br><span class="transaction__country_from"><img src="images/icon-flag-france.svg"> France</span></td>
                     <td>31 janv. 2022 <br> 14:17:07</td>
                     <td>Mohamed Doumbouya <br><span class="transaction__country_to"><img src="images/icon-flag-guinee.svg"> Guinée</span></td>
-                    <td>Refusé</td>
+                    <td><span class="transaction__status refuse">Refusé</span></td>
                     <td class="transaction__action"><img src="images/icon-actions.svg"></td>
                   </tr>
                   <tr class="transactions__row">
@@ -181,7 +182,7 @@
                     <td>Mohamed Doumbouya <br><span class="transaction__country_from"><img src="images/icon-flag-usa.svg"> USA</span></td>
                     <td>31 janv. 2022 <br> 14:17:07</td>
                     <td>Mariama Mara <br><span class="transaction__country_to"><img src="images/icon-flag-guinee.svg"> Guinée</span></td>
-                    <td>Validé</td>
+                    <td><span class="transaction__status valide">Validé</span></td>
                     <td class="transaction__action"><img src="images/icon-actions.svg"></td>
                   </tr>
                   <tr class="transactions__row">
@@ -191,7 +192,7 @@
                     <td>Aïssatou Camara <br><span class="transaction__country_from"><img src="images/icon-flag-france.svg"> France</span></td>
                     <td>31 janv. 2022 <br> 14:17:07</td>
                     <td>Ibrahima Bah <br><span class="transaction__country_to"><img src="images/icon-flag-guinee.svg"> Guinée</span></td>
-                    <td>A vérifier</td>
+                    <td><span class="transaction__status verifier">A vérifier</span></td>
                     <td class="transaction__action"><img src="images/icon-actions.svg"></td>
                   </tr>
                   <tr class="transactions__row">
@@ -201,7 +202,7 @@
                     <td>Ousmane Conté <br><span class="transaction__country_from"><img src="images/icon-flag-france.svg"> France</span></td>
                     <td>31 janv. 2022 <br> 14:17:07</td>
                     <td>Abdoulaye Camara <br><span class="transaction__country_to"><img src="images/icon-flag-guinee.svg"> Guinée</span></td>
-                    <td>Contesté</td>
+                    <td><span class="transaction__status conteste">Contesté</span></td>
                     <td class="transaction__action"><img src="images/icon-actions.svg"></td>
                   </tr>
                   <tr class="transactions__row">
@@ -211,7 +212,7 @@
                     <td>Ibrahima Bah <br><span class="transaction__country_from"><img src="images/icon-flag-guinee.svg"> Guinée</span></td>
                     <td>31 janv. 2022 <br> 14:17:07</td>
                     <td>Fatoumata Diallo <br><span class="transaction__country_to"><img src="images/icon-flag-guinee.svg"> Guinée</span></td>
-                    <td>Validé</td>
+                    <td><span class="transaction__status valide">Validé</span></td>
                     <td class="transaction__action"><img src="images/icon-actions.svg"></td>
                   </tr>
                   <tr class="transactions__row">
@@ -221,7 +222,7 @@
                     <td>Abdoulaye Camara <br><span class="transaction__country_from"><img src="images/icon-flag-france.svg"> France</span></td>
                     <td>31 janv. 2022 <br> 14:17:07</td>
                     <td>Mariama Mara <br><span class="transaction__country_to"><img src="images/icon-flag-guinee.svg"> Guinée</span></td>
-                    <td>A vérifier</td>
+                    <td><span class="transaction__status verifier">A vérifier</span></td>
                     <td class="transaction__action"><img src="images/icon-actions.svg"></td>
                   </tr>
                   <tr class="transactions__row">
@@ -231,7 +232,7 @@
                     <td>Abdoulaye Camara <br><span class="transaction__country_from"><img src="images/icon-flag-france.svg"> France</span></td>
                     <td>31 janv. 2022 <br> 14:17:07</td>
                     <td>Mariama Mara <br><span class="transaction__country_to"><img src="images/icon-flag-guinee.svg"> Guinée</span></td>
-                    <td>A finaliser</td>
+                    <td><span class="transaction__status finaliser">A finaliser</span></td>
                     <td class="transaction__action"><img src="images/icon-actions.svg"></td>
                   </tr>
                   <tr class="transactions__row">
@@ -241,7 +242,7 @@
                     <td>Abdoulaye Camara <br><span class="transaction__country_from"><img src="images/icon-flag-france.svg"> France</span></td>
                     <td>31 janv. 2022 <br> 14:17:07</td>
                     <td>Mariama Mara <br><span class="transaction__country_to"><img src="images/icon-flag-guinee.svg"> Guinée</span></td>
-                    <td>Annulé</td>
+                    <td><span class="transaction__status annule">Annulé</span></td>
                     <td class="transaction__action"><img src="images/icon-actions.svg"></td>
                   </tr>
                   <tr class="transactions__row">
@@ -251,7 +252,7 @@
                     <td>Abdoulaye Camara <br><span class="transaction__country_from"><img src="images/icon-flag-france.svg"> France</span></td>
                     <td>31 janv. 2022 <br> 14:17:07</td>
                     <td>Mariama Mara <br><span class="transaction__country_to"><img src="images/icon-flag-guinee.svg"> Guinée</span></td>
-                    <td>A vérifier</td>
+                    <td><span class="transaction__status verifier">A vérifier</span></td>
                     <td class="transaction__action"><img src="images/icon-actions.svg"></td>
                   </tr>
                 </tbody>
