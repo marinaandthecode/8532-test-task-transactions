@@ -72,3 +72,59 @@ body {
     
 }
 
+.search__top {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.search__grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+}
+
+.search__item {
+    width: 355px;
+    height: 52px;
+}
+
+.search__bottom {
+    display: flex; 
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 25px;
+}
+
+.filter {
+    display: flex; 
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.filter__item {
+    height: 36px;
+}
+
+.transactions__table {
+    width: 100%; 
+    text-align: left;
+}
+
+.transaction__action {
+    text-align: right;
+}
+
+.transaction__country_from, 
+.transaction__country_to {
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+
+
