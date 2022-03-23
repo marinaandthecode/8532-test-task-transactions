@@ -7,6 +7,7 @@
     --color-bgr-lightblue: #E6EFFF; 
     --color-bgr-white: #FFFFFF; 
     --color-accent-blue: #2450EF;
+    --color-text-dark-blue: #051951;
     
 
     --color-status-finaliser: rgba(69, 108, 248, 0.3); 
@@ -24,7 +25,7 @@
 
 @font-face {
     font-family: Cerebri Sans Bold;
-    font-weight: bold;
+    font-weight: medium;
     src: url("./cerebri.sans.bold.ttf") format("opentype");
 }
 
@@ -37,6 +38,8 @@
 body {
     font-family: 'Cerebri Sans Book', sans-serif;
     font-size: 15px;
+    line-height: 22px;
+    color: var(--color-text-dark-blue);
 
 }
 
@@ -55,6 +58,37 @@ body {
     background-color: var(--color-bgr-lightblue);
 }
 
+.sidebar__username {
+    width: 176px;
+    margin-top: 19px;
+    margin-bottom: 11px;
+    font-family: Cerebri Sans Bold;
+
+}
+
+.sidebar__hr {
+    width: 233px;
+    color: var(--color-bgr-white);
+    transform: translateX(-42px);
+}
+
+.sidebar__select-container {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 191px;
+    height: 43px;
+    border-radius: 10px;
+
+}
+
+.sidebar__select {
+    border-radius: 10px;
+}
+
+
+
+/* main nav */
+
 .nav__list {
     list-style: none;
     padding-left: 0;
@@ -63,15 +97,29 @@ body {
 .nav__item {
     display: flex;
     align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    font-family: Cerebri Sans Bold;
+    
 }
 
 .nav__link {
     text-decoration: none;
+    width: 160px;
+    color: var(--color-text-dark-blue);
+
 }
+
+.nav__link:active {
+    color: var(--color-accent-blue);
+}
+
 .nav__icon {
     width: 24px;
     height: 24px;
 }
+
+
 
 
 /* main */
@@ -137,7 +185,7 @@ body {
 }
 
 .refuse {
-    background-color: var(--color-status-refuse)
+    background-color: var(--color-status-refuse);
 }
 
 .conteste {
