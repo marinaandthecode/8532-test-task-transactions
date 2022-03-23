@@ -8,6 +8,7 @@
     --color-bgr-white: #FFFFFF; 
     --color-accent-blue: #2450EF;
     --color-text-dark-blue: #051951;
+    --color-text-gray: #9AA3BC;
     
 
     --color-status-finaliser: rgba(69, 108, 248, 0.3); 
@@ -169,7 +170,7 @@ body {
 }
 
 .search__item {
-    width: 355px;
+    max-width: 355px;
     height: 52px;
     border-radius: 4px;
 }
@@ -225,7 +226,7 @@ body {
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
-    color: #9AA3BC;
+    color: var(--color-text-gray);
 }
 
 .search__button {
@@ -247,6 +248,7 @@ body {
 }
 
 
+
 /* filter */
 
 .filter {
@@ -264,6 +266,10 @@ body {
     text-transform: uppercase;
     text-align: center;
     white-space: nowrap;
+}
+
+.filter__item_annule {
+    color: var(--color-bgr-white);
 }
 
 
@@ -304,12 +310,47 @@ body {
     margin-top: 24px;
     text-align: left; 
     border-color: var(--color-bgr-lightblue);
+    color: var(--color-text-dark-blue);
+}
+
+.transactions__head {
+    color: gray;
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 .table>:not(:last-child)>:last-child>* {
     border-bottom-color: var(--color-bgr-lightblue);
 }
 
+.transactions__row td,
+.transactions__row th {
+    padding-top: 16px;
+    padding-bottom: 17px;
+}
+
+.transaction__id {
+    color: var(--color-text-dark-blue);
+    font-family: Cerebri Sans Bold;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+    
+}
+
+.transaction__type {
+    color: #456CF8;
+}
+
+.transaction__from, 
+.transaction__to {
+    font-family: Cerebri Sans Bold; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 9px;
+}
 
 
 .transaction__country_from, 
@@ -318,6 +359,12 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 8px;
+    font-family: 'Cerebri Sans Book', sans-serif;
+    font-weight: 400;
+}
+
+.transaction__date {
+    color: var(--color-text-gray);
 }
 
 .transaction__status {
@@ -325,6 +372,7 @@ body {
     padding: 7px 8px 7px 8px;
     border-radius: 60px;
     gap: 8px;
+    color: var(--color-text-dark-blue);
     
 }
 
