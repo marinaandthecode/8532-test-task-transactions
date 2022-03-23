@@ -387,4 +387,15 @@ body {
     margin-top: 22px;
 }
 
+.page-link {
+    border: none;
+    border-radius: 10px;
+    color: var(--color-text-dark-blue);
+    font-family: Cerebri Sans Bold;
+}
+
+.page-item.active .page-link {
+    background-color: var(--color-accent-blue);
+}
+
 
